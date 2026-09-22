@@ -1,5 +1,6 @@
 export interface Course {
   name: string;
+  id: number;
   holes: Hole[];
   par: number;
 }

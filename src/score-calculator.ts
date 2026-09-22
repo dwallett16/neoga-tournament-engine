@@ -8,7 +8,17 @@ class ScoreCalculator {
     }, 0);
   }
 
-  getNetScore(round: Round, course: Course): number {}
+  getNetScore(round: Round): number {
+    const grossScore = this.getGrossScore(round);
+    return grossScore - round.player.handicap;
+  }
+
+  getNetScoreDescription(round: Round, course: Course): string {
+    const netScore = this.getNetScore(round);
+    const scoreDifference = netScore - course.par;
+    const plusOrMinus = scoreDifference > 0 ? "+" : "";
+    return `${plusOrMinus}${scoreDifference}`;
+  }
 }
 
 export = ScoreCalculator;

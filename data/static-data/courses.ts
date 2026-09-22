@@ -3,6 +3,7 @@ import { type Course, type Hole } from "../../src/models/course";
 const courseData: Course[] = [
   {
     name: "Deer Ridge Golf Club",
+    id: 1,
     holes: [
       { number: 1, handicap: 11, par: 4 },
       { number: 2, handicap: 7, par: 4 },
@@ -26,3 +27,5 @@ const courseData: Course[] = [
     par: 72,
   },
 ];
+
+export = courseData;
