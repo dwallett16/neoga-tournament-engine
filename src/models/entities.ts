@@ -1,4 +1,4 @@
-export interface PlayerScoreEntity {
+export interface PlayerScoreSpreadsheetEntity {
   Player: string;
   "Hole 1": number;
   "Hole 2": number;
@@ -18,4 +18,23 @@ export interface PlayerScoreEntity {
   "Hole 16": number;
   "Hole 17": number;
   "Hole 18": number;
+}
+
+export interface PlayerEntity {
+  Player_ID: number;
+  Fullname: string;
+  Handicap: number;
+}
+
+export interface CourseEntity {
+  Course_ID: number;
+  Name: string;
+  Par: number;
+}
+
+export interface HoleEntity {
+  Number: number;
+  Handicap: number;
+  Par: number;
+  Course_ID: string;
 }
