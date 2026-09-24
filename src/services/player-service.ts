@@ -4,6 +4,7 @@ import Database = require("better-sqlite3");
 
 class PlayerService {
   constructor(private readonly db: Database.Database) {}
+
   getPlayerByName(name: string): Player | undefined {
     const fullNameTrimmed = name.trim().toLowerCase();
 
